@@ -28,7 +28,6 @@ $(function () {
       .setTween(tl)
       .addTo(scrollMagicController);
 
-    // Add debug indicators fixed on right side
    
   });
 });
