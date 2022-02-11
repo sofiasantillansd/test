@@ -1,0 +1,177 @@
+@import "susy";
+@import "compass/css3";
+
+//Google web fonts
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+#open_sans {
+	font-family: 'Open Sans';
+  /* font-weight: 700; */
+}
+#merriweather {
+  font-family: 'Merriweather', serif;
+}
+
+$susy: (
+  flow: ltr, // ltr | rtl
+  output: float, // float | isolate
+  math: fluid, // fluid | static (requires column-width)
+  container: auto, // length or % | auto
+  container-position: center, // left | center | right | <length> [*2] (grid padding)
+  last-flow: to,
+  columns: 24,
+  gutters: 0,
+  gutter-position: inside, // before | after | split | inside | inside-static (requires column-width)
+  global-box-sizing: border-box, // content-box | border-box (affects inside/inside-static)
+  use-custom: (
+    box-sizing: true,
+    clearfix: true,
+    rem: true,
+  )
+);
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "acta-display";
+  font-weight: 300;
+  background: rgba(188,188,188,1);
+}
+
+html, body { font-size: 62.5%; }
+
+h1, h2, h3, h4, h4, h5, h6 {
+  font-family: "acta-display";
+  font-weight: 300;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+  
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+ 
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  width: 100vw;
+  min-height: 400px;
+  height: 100vh;
+  background: #03293c;
+  color: white;
+  
+  font-weight: bold;
+  text-align: left;
+  
+  @extend .flex;
+  
+  article {
+    @include pad(2 of 24, 12 of 24);
+    @include span(10 of 24);
+    text-align: left;
+    
+    h1 {
+      font-size: 9rem;
+      margin: 0 0 2.5rem;
+      line-height: 1em;
+    }
+    
+    p {
+      font-size: 2rem;
+    }
+  }
+}
+
+.btn {
+  padding: 1rem 2rem;
+  display: inline-block;
+  text-decoration: none;
+  @include transition(all 0.3s ease-in-out);
+  font-size: 2rem;
+  
+  &--ghost {
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(223,223,223,1);
+    
+    &:hover {
+      background: rgba(255,255,255,1);
+      color: black;
+    }
+  }
+}
+
+.section {
+  width: 100vw;
+  min-height: 400px;
+  height: 100vh;
+  @extend .flex;
+  color: white;
+  @include pad(4 of 24);
+  @include box-sizing();
+  position: relative;
+  
+  &:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    content:"";
+    font-size: 25.5rem;
+    color: rgba(255,255,255,0.05);
+  }
+  
+  &:nth-child(1) {
+    background: #f44e57;
+    
+    &:before {
+      content:"Chapter 01";
+    }
+  }
+  
+  &:nth-child(2) {
+    background: #1c2d35;
+    
+    &:before {
+      content:"Chapter 02";
+    }
+  }
+  
+  &:nth-child(3) {
+    background: #686860;
+    
+    &:before {
+      content:"Chapter 03";
+    }
+  }
+  
+  &__left {
+    @include span(12 of 24);
+  }
+  
+  &__right {
+    @include span(12 of 24);
+  }
+  
+  article {
+    text-align: left;
+    
+    h3 {
+      font-size: 4.1rem;
+    }
+    
+    p {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
