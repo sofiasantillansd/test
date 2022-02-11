@@ -7,8 +7,6 @@
   "dependencies": {
     "gsap": "^3.9.1",
     "jquery": "^3.6.0",
-    "lettering.js": "^0.7.2",
-    "swiper": "^8.0.3",
     "scrollmagic": "^2.0.8"
   },
   "devDependencies": {},
