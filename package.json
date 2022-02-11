@@ -1,0 +1,19 @@
+{
+  "name": "gsap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "external.js",
+  "dependencies": {
+    "gsap": "^3.9.1",
+    "jquery": "^3.6.0",
+    "lettering.js": "^0.7.2",
+    "swiper": "^8.0.3",
+    "scrollmagic": "^2.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
