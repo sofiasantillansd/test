@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "external.js",
+  "type":"module",
   "dependencies": {
     "gsap": "^3.9.1",
     "jquery": "^3.6.0",
