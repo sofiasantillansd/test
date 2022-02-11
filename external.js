@@ -1,4 +1,3 @@
-// import styles bundle
 import { gsap } from "./node_modules/gsap/index.js";
 import { ScrollTrigger } from "./node_modules/gsap/all.js";
 
